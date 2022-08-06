@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+*{
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #f5f5f5;
+}
+
+body{
+    background: whitesmoke;
+}
+
+.wrapper{
+    display: flexbox;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.side-navbar{
+    float: left;
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to bottom right, rgba(109, 189, 174), rgba(103, 169, 190));
+    background-attachment: fixed;
+    overflow-x: hidden;
+    box-shadow: 2px 1px 5px grey;
+}
+
+#navbar-logo{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 33px;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#dashboard-btn{
+    text-decoration: underline 0.1em;
+    text-underline-offset: 0.3em;
+}
+
+#about-btn, #dashboard-btn, #sign-out-btn{
+    font-family: 'Space Grotesk', sans-serif;
+    background: transparent;
+    display: block;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}
+
+#about-btn:hover, #dashboard-btn:hover, #sign-out-btn:hover{
+    background: rgba(102, 102, 102, 0.2);
+    font-weight: bold;
+    transition: font-weight 150ms;
+}
+
+.page-body{
+    float: right;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.header-message{
+    align-self:flex-start;
+    width: 100%;
+    height: 60px;
+    margin: 3rem;
+}
+
+.header-message p{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    color: #181717;
+    font-size: 3rem;
+}
+
+.header-message h2{
+    margin-top:10px;
+    color: #181717;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.scores-box{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 20px;
+    align-items: center;
+    height: auto;
+    width: 95%;
+}
+
+#user-image img{
+    object-fit: cover;
+    height: 125px;
+    width: 125px;
+    border-radius: 90px;
+}
+
+#danceability, #valence, #energy, #instrumentalness{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    height: 200px;
+    width: 90%;
+}
+
+#danceability{
+    margin-top: 20px;
+}
+
+#instrumentalness{
+    margin-bottom: 40px;
+}
+
+.scores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 175px;
+    border-radius: 30px;
+    border: 1px rgb(14, 86, 37) solid;
+    
+}
+
+
+#danceability .scores{
+    background: rgb(214, 117, 229, 0.7);
+}
+
+#valence .scores{
+    background: rgb(126, 224, 212, 0.6);
+}
+
+#energy .scores{
+    background: rgb(252, 199, 95, 0.6);
+}
+
+#instrumentalness .scores{
+    background: rgb(136, 222, 134, 0.6);
+}
+
+#trait{
+    font-family: 'Space Grotesk', sans-serif;
+    align-self: flex-start;
+    color: #181717;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.results{
+    border-top: 1px black solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.user-trait{
+    font-family: 'Space Grotesk', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.explanation{
+    display: flex;
+    height: 80%;
+    width: 80%;
+    background: rgba(188, 225, 188, 0.4);
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.explanation p{
+    font-family: 'Inter', sans-serif;
+    
+    padding: 2rem;
+    color:#181717;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+
+
