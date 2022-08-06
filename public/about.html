@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="/css/about.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-navbar">
+            <p id="navbar-logo">personalify</p>
+            <ul>
+                <li>
+                    <button action="/about" method="get" id="about-btn">about</button>
+                </li>
+                <li>
+                    <form action="/dashboard" method="get" id="dashform"></form>
+                    <button type="submit" form="dashform" value="hi" id="dashboard-btn">dashboard</button>
+                </li>
+                <li>
+                    <form action="/signout" method="get" id="signoutform"></form>
+                    <button type="submit" form="signoutform" value="signout" id="sign-out-btn">sign out</button>
+                </li>
+            </ul>
+        </div>
+        <div class="page-body">
+            <section id="info-usage">
+                <h1 class="section-title">Information Usage</h1>
+                <div class="section-body">
+                    <p>
+                        <strong>personalify</strong> is a web application that determines the user's 
+                        personality traits based on their top listened tracks in Spotify. The
+                        user will need a Spotify account (either free or premium) to log
+                        into <strong>personalify</strong>. Using Spotify's Web API, personalify 
+                        gathers the user's top tracks as well as each track's audio features
+                        from their Spotify account. Additionally, <strong>personalify</strong> will 
+                        gather the user's full name, Spotify username, and profile picture to
+                        be featured the user's private dashboard.
+                    </p>
+                </div>
+            </section>
+            <section id="trait-det">
+                <h1 class="section-title">Trait Determination</h1>
+                <div class="section-body">
+                    <p>
+                        <strong>personalify</strong> focuses on four audio features: Danceability,
+                        Valence, Energy, and Instrumentalness. According to <a href="https://journals.sagepub.com/doi/full/10.1177/20592043211014014">new studies</a> on music
+                        and personality, the four audio features correlate strongly to extraversion,
+                        outlook, energy, and taste/preference. For each of the user's top tracks, 
+                        <strong>personalify</strong> calculates the mean scores for each audio
+                        feature and uses the below scales to determine the corresponding personality trait.
+                    </p>
+                    <h3>Scores & Traits</h3>
+                    <div id="score-tables-1">
+                        <table>
+                            <caption>Danceability</caption>
+                            <tr>
+                                <th>Audio Feature Score</th>
+                                <th>Personality Trait</th>
+                            </tr>
+                            <tr>
+                                <td>0.0 - 0.40</td>
+                                <td>Introvert</td>
+                            </tr>
+                            <tr>
+                                <td>0.40 - 0.75</td>
+                                <td>Ambivert</td>
+                            </tr>
+                            <tr>
+                                <td>0.75 - 1.0</td>
+                                <td>Extrovert</td>
+                            </tr>
+                        </table>
+    
+                        <table>
+                            <caption>Valence</caption>
+                            <tr>
+                                <th>Audio Feature Score</th>
+                                <th>Personality Trait</th>
+                            </tr>
+                            <tr>
+                                <td>0.0 - 0.50</td>
+                                <td>Pessimist</td>
+                            </tr>
+                            <tr>
+                                <td>0.50 - 1.0</td>
+                                <td>Optimist</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div id="score-tables-2">
+                        <table>
+                            <caption>Energy</caption>
+                            <tr>
+                                <th>Audio Feature Score</th>
+                                <th>Personality Trait</th>
+                            </tr>
+                            <tr>
+                                <td>0.0 - 0.50</td>
+                                <td>Mellow</td>
+                            </tr>
+                            <tr>
+                                <td>0.50 - 1.0</td>
+                                <td>Energetic</td>
+                            </tr>
+                        </table>
+    
+                        <table>
+                            <caption>Instrumentalness</caption>
+                            <tr>
+                                <th>Audio Feature Score</th>
+                                <th>Personality Trait</th>
+                            </tr>
+                            <tr>
+                                <td>0.0 - 0.50</td>
+                                <td>Simple</td>
+                            </tr>
+                            <tr>
+                                <td>0.50 - 1.0</td>
+                                <td>Sophisticated</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+            </section>
+            <section id="about-creator">
+                <h1 class="section-title">About the Creator</h1>
+                <div class="section-body">
+                    <p>
+                        Hi! I'm <strong>Janani Pandurangan</strong>, a junior studying Computer Science
+                        at San Jose State University. Music is a significant part of my life and it has
+                        helped shape my personality greatly. As an avid Spotify user, I wanted to find
+                        out if the music I listen to on Spotify reflects my true personality, and thus I
+                        created <strong>personalify</strong>! With this web application, users can see how
+                        their Spotify personality compares to their true personality. I hope it's accurate!
+
+                    </p>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+</body>
+</html>

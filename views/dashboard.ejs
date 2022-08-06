@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-navbar">
+            <p id="navbar-logo">personalify</p>
+            <ul>
+                <li>
+                    <form action="/about" method="get" id="abtform"></form>
+                    <button type="submit" form="abtform" value="True" id="about-btn">about</button>
+                </li>
+                <li>
+                    <form action="/dashboard" method="get" id="dashform"></form>
+                    <button type="submit" form="dashform" value="dash" id="dashboard-btn">dashboard</button>
+                </li>
+                <li>
+                    <form action="/signout" method="get" id="signoutform"></form>
+                    <button type="submit" form="signoutform" value="signout" id="sign-out-btn">sign out</button>
+                </li>
+            </ul>
+        </div>
+        <div class="page-body">
+            <div class="header-message">
+                <p>Welcome, <%= username %>!</p>
+                <h2>Here is your Spotify Personality.</h2>
+            </div>
+            <div id="user-image">
+                <img src= '<%= url %>' alt="profile-pic">
+            </div>
+            <div class="scores-box">
+                <div id="danceability">
+                    <h3 id="trait">Extraversion</h3>
+                    
+                    <div class="results">
+                        <div class="scores">
+                            <p class="user-trait"> <%= trait1 %> </p>
+                        </div> <!-- Put personality trait inside div-->
+                        <div class="explanation">
+                            <p> <%= expl1 %> </p>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div id="valence">
+                    <h3 id="trait">Outlook</h3>
+                    
+                    <div class="results">
+                        <div class="scores">
+                            <p class="user-trait"> <%= trait2 %> </p>
+                        </div> <!-- Put personality trait inside div-->
+                        <div class="explanation">
+                            <p> <%= expl2 %> </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="energy">
+                    <h3 id="trait">Energy</h3>
+                    
+                    <div class="results">
+                        <div class="scores">
+                            <p class="user-trait"> <%= trait3 %></p>
+                        </div> <!-- Put personality trait inside div-->
+                        <div class="explanation">
+                            <p> <%= expl3 %> </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="instrumentalness">
+                    <h3 id="trait">Taste</h3>
+                    <div class="results">
+                        <div class="scores">
+                            <p class="user-trait"> <%= trait4 %> </p>
+                        </div> <!-- Put personality trait inside div-->
+                        <div class="explanation">
+                            <p> <%= expl4 %> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+
+
+</body>
+</html>
